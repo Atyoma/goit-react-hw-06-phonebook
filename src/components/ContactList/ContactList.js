@@ -3,9 +3,9 @@ import {
   NumberOrder,
   Number,
   DeleteContact,
-} from "./ContactList.styled";
+} from './ContactList.styled';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 export const ContactList = ({ contacts, onDelete }) => {
   return (
@@ -14,7 +14,7 @@ export const ContactList = ({ contacts, onDelete }) => {
         <ListItem key={index}>
           <NumberOrder>{index + 1}</NumberOrder>
           {contact.name}: <Number>{contact.number}</Number>
-          <DeleteContact type="button" onClick={() => onDelete(contact.id)}>
+          <DeleteContact type="button" onClick={() => onDelete(contact.name)}>
             Delete
           </DeleteContact>
         </ListItem>
